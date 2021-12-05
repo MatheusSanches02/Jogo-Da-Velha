@@ -17,24 +17,21 @@ package Entidades;
  * <Entrega: 19/09/2021>
  *************************************************/
 public class Main {
-
 	public static void main(String[] args) {
-		Tabuleiro tabuleiro = new Tabuleiro();
 		MenuPrincipal menu = new MenuPrincipal();
 		int opcaoSelecionada = menu.imprimeMenuPrincipal();
+		Tabuleiro tabuleiro = Tabuleiro.getInstance();
+		
 		switch(opcaoSelecionada) {
 			case(1):
-				tabuleiro.jogar();
+				tabuleiro.jogar(false);
 				break;
 			case(2):
-				System.out.println("Em construção");
+				tabuleiro.jogar(true);
 				break;
 			case(3):
 				System.out.println("Em construção");
 				break;
-			
 		}
-		
 	}
-
 }
